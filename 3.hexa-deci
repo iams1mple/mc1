@@ -1,0 +1,13 @@
+mov r0,#30h
+mov a,@r0
+mov 0f0h,#0ah
+div ab
+mov r1,0f0h
+mov 0f0h,#0ah
+div ab
+mov 40h,a
+mov a,0f0h
+swap a
+orl a,r1
+mov 41h,a
+end

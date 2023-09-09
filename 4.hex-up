@@ -1,0 +1,13 @@
+up:mov a,#00 		
+back: acall delay  		 
+inc a 		
+jnz back
+sjmp up                 
+delay: mov r1,#055h
+decr1: mov r2,#066h
+decr: mov r3,#0FFh
+djnz r3,$
+djnz r2,decr
+djnz r1,decr1
+ret
+end

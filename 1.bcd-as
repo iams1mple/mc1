@@ -1,0 +1,16 @@
+mov r1,#02h
+mov r0,#40h
+mov a,@r0
+mov 0f0h,a
+anl a,#0fh
+back: add a,#30h
+ inc r0
+ mov @r0,a
+ djnz r1,next
+ sjmp loop
+ next: mov a,0f0h
+ anl a,#0f0h
+ swap a 
+ sjmp back
+ loop :sjmp loop
+end

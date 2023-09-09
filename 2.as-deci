@@ -1,0 +1,6 @@
+mov r0,#30h
+mov a,@r0
+sub a,#30h
+inc r0
+mov @r0,a
+end

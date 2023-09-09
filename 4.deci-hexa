@@ -1,0 +1,11 @@
+mov r0,#30h
+mov a,@r0
+mov 0f0h,#10h
+div ab
+mov r1,0f0h
+mov 0f0h,#0ah
+mul ab
+add a,r1
+inc r0
+mov @r0,a
+end
